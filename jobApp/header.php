@@ -7,23 +7,23 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 4px 4px 5px -4px;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">FindJob</a>
+        <a class="navbar-brand" href="index.php">FindJob</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="buku.php">Apply</a>
+              <a class="nav-link" aria-current="page" href="joblist.php">Apply</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="histori_peminjaman.php">List</a>
+              <a class="nav-link" aria-current="page" href="jobtaken.php">List</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="logout.php">Logout</a>
+              <a class="nav-link" aria-current="page" href="login.php">login</a>
             </li>
           </ul>
         </div>
