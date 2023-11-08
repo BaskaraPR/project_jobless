@@ -1,7 +1,7 @@
 <?php 
 session_start();
     if($_SESSION['status_login']!=true){
-        header('location: login.php');
+        header('location: ./login.php');
     }
 ?>
 <!DOCTYPE html>
@@ -25,9 +25,9 @@ session_start();
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="showJobs.php">Hosted Jobs</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="profil.php">profi</a>
-            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="profiladmin.php">profi</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="login.php">Logout</a>
             </li>

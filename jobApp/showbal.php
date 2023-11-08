@@ -14,7 +14,7 @@
 <div class="row" id = amba>
     <?php
     include "connect.php";
-    $qry_profile=mysqli_query($conn,"select * from user where username = '".$_SESSION['username']."'");
+    $qry_profile=mysqli_query($conn,"select * from user where id_user = '".$_SESSION['id_user']."'");
     while($dt_profile=mysqli_fetch_array($qry_profile)){
         ?>
         <div class="col-md-3">

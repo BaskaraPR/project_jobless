@@ -11,6 +11,7 @@
 </head>
 <body>
     <h2 align = "center">welcome <?=$_SESSION['username']?></h2>
-    <h1>aaaaaaaaa</h1>
+    <h1>Manage your Jobs</h1>
+    <a href="showJobs.php" class ="btn btn-primary">My Jobs</a>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
     include "connect.php";
-    include "header.php";
+    include "adminheader.php";
 ?>
 
 
@@ -34,9 +34,6 @@
     }
     ?>
 </div>
-</div>
-<div class="btn btn-success" >
-    <a href="update.php">update</a>
 </div>
 </body>
 </html>
