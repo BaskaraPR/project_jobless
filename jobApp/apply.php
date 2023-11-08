@@ -1,34 +1,44 @@
-<?php
+<?php 
     include "header.php";
+    include "connect.php";
+    $qry_detail_job=mysqli_query($conn,"select * from job where id_job = '".$_GET['id_job']."'");
+    $dt_job=mysqli_fetch_array($qry_detail_job);
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title></title>
-</head>
-<body>
-    <h3>Apply here</h3>
-    <form action="process_apply.php" method="post">
-        Nama :
-        <input type="text" name="nama" value="" class="form-control">
-        Alamat :
-        <input type="text" name="alamat" value="" class="form-control">
-        No.telp :
-        <input type="text" name="notp" value="" class="form-control">
-        CV :
-        <input type="file" name="cv" value="" class="form-control">
-        <!-- Tanggal Lahir : 
-        <input type="date" name="tgl_lahir" value="" class="form-control">
-        Jenis Kelamin : 
-        <select name="jk" class="form-control">
-            <option></option>
-            <option value="L">Laki-laki</option>
-            <option value="P">Perempuan</option>
-        </select> -->
-        <input type="submit" name="simpan" value="Apply" class="btn btn-primary">
-    </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
-</html>
+<h2>ambil kerjo sek</h2>
+<div class="row">
+    <div class="col-md-4">
+        <img src="data:image/png;base64,<?=base64_encode($dt_job['foto'])?>" class="card-img-top">
+    </div>
+    <div class="col-md-8">
+        <form action="appliedJob.php?id_job=<?=$dt_job['id_job']?>" method="post">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <td><label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label>
+                            <input type="text" id="email" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="notelp">No.Telp:</label>
+                            <input type="number" id="notelp" name="notelp" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nama Pekerjaan</td><td><?=$dt_job['namajob']?></td>
+                    </tr>
+                    <tr>
+                        <td>Gaji</td><td><?=$dt_job['gaji']?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class="btn btn-success" type="submit" value="Apply"></td>
+                    </tr>
+                </thead>
+            </table>
+        </form>
+    </div>
+</div>

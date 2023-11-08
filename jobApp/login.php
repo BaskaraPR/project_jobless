@@ -1,31 +1,20 @@
-<?php
-    include "header.php";
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login sek</title>
 </head>
 <body>
-    <h3 align = "center">Login</h3>
-    <form action="proses_login.php" method="post">
-        Nama :
-        <input type="text" name="nama" value="" class="form-control">
-        Alamat :
-        <input type="text" name="alamat" value="" class="form-control">
-        Tanggal Lahir : 
-        <input type="date" name="tgl_lahir" value="" class="form-control">
-        Jenis Kelamin : 
-        <select name="jk" class="form-control">
-            <option></option>
-            <option value="L">Laki-laki</option>
-            <option value="P">Perempuan</option>
-        </select>
-        <input type="submit" name="simpan" value="Login" class="btn btn-primary">
-    </form>
+    <h1>Login rek</h1>
+    <form action="prosesLogin.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Log In">
+    </form>
 </body>
 </html>
